@@ -28,7 +28,7 @@ install() {
     \"server\":\"0.0.0.0\",
     \"server_port\":$port,
     \"local_address\": \"127.0.0.1\",
-    \"local_port\":1080,
+    \"local_port\":1024,
     \"password\":\"$1\",
     \"timeout\":300,
     \"method\":\"aes-256-cfb\"
