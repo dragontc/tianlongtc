@@ -25,7 +25,7 @@ install() {
           exit 1
         fi
 	echo "{
-    \"server\":\"0.0.0.0\",
+    \"server\":\"::\",
     \"server_port\":$port,
     \"local_address\": \"127.0.0.1\",
     \"local_port\":1080,
