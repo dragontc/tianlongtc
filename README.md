@@ -29,3 +29,8 @@ echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 
 sysctl net.ipv4.tcp_available_congestion_control
+
+ss搭建完成
+
+# 搭建v2ray
+https://www.mastercaihao.com/804.html
