@@ -77,3 +77,7 @@ curl  https://get.acme.sh | sh
 # 修改配置文件
 
 ...
+
+# 安装trojan
+
+https://www.v2rayssr.com/trojan-2.html
