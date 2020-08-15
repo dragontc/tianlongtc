@@ -30,7 +30,38 @@ sysctl -p
 
 sysctl net.ipv4.tcp_available_congestion_control
 
-ss搭建完成
+#ss搭建完成
 
 # 搭建v2ray
 https://www.mastercaihao.com/804.html
+
+#安装curl
+apt update
+apt install curl
+
+#下载v2ray脚本文件
+curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
+curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh
+
+#安装v2ray
+bash install-release.sh
+
+#启动v2ray
+systemctl start v2ray
+
+# 为V2ray启用TLS加密(域名指向vps地址)
+
+#安装socat组件，这是下一步acme.sh所需要的一个组件。
+apt install socat
+
+#下载并安装acme.sh
+curl  https://get.acme.sh | sh
+
+#为域名生成证书
+~/.acme.sh/acme.sh --issue -d yourdomain.com --standalone -k ec-256
+
+#将刚申请的ecc证书安装到v2ray目录
+~/.acme.sh/acme.sh --installcert -d yourdomain.com --fullchainpath /usr/local/etc/v2ray/v2ray.crt --keypath /usr/local/etc/v2ray/v2ray.key --ecc
+
+# 修改配置文件
+...
