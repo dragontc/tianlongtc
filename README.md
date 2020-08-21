@@ -81,3 +81,4 @@ curl  https://get.acme.sh | sh
 # 安装trojan
 
 https://www.v2rayssr.com/trojan-2.html
+https://trojan-tutor.github.io/2019/04/10/p41.html
